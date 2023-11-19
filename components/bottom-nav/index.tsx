@@ -37,9 +37,9 @@ export const BottomNavbar = () => {
 			{BottomNav.map((item, index) => {
 				return (
 					<Link
-						className={`flex flex-col items-center ${
+						className={`flex flex-col items-center pt-2 no-underline  ${
 							item.label === "Transaction" ? "flex-2" : "flex-3"
-						} ${tab === item.label ? "text-blue-500" : "text-gray-500"}`}
+						} ${tab === item.label ? "text-primary" : "text-gray-500"}`}
 						href={""}
 						key={item.label}
 						onClick={() => setTab(item.label)}

@@ -17,9 +17,14 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
-				{children}
-				<BottomNavbar />
+			<body className={`${inter.className} flex flex-col`}>
+				<section className="flex-end fixed py-4 top-0 w-full bg-secondary">
+					header
+				</section>
+				<section className="my-16">{children}</section>
+				<section className="flex-end fixed bottom-0 w-full bg-secondary">
+					<BottomNavbar />
+				</section>
 			</body>
 		</html>
 	);
